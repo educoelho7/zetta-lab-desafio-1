@@ -11,9 +11,13 @@ Para isso, foram utilizadas bases de dados públicas de saúde, educação, meio
 ### 1. Preparação e Tratamento dos Dados
 
 Unificação de diferentes bases de dados (saúde, educação, economia, meio ambiente, segurança) em um único DataFrame principal (main_df).
+
 Normalização e padronização dos nomes das colunas).
+
 Conversão e limpeza de dados numéricos e categóricos.
+
 Remoção de valores nulos e inconsistentes.
+
 Criação de variáveis derivadas, como taxas per capita (ex: taxa de homicídios por 100 mil habitantes).
 
 ### 2. Visualização Geográfica (Mapas)
@@ -28,21 +32,29 @@ Criação de variáveis derivadas, como taxas per capita (ex: taxa de homicídio
 Para compreender quais variáveis mais influenciam o IDHM, foi treinado um modelo de Random Forest Regressor:
 
 Variável alvo: idhm 2010
+
 Variáveis explicativas: educação, saúde, meio ambiente, economia, segurança, etc.
+
 O modelo foi ajustado e gerou um ranking de importância das variáveis (feature_importances_).
+
 O resultado foi organizado em um DataFrame com as colunas metrica e importancia.
+
 Esse ranking permite identificar quais indicadores têm maior peso no desenvolvimento humano municipal.
 
 ### 4. Agrupamento de Municípios (K-Means Clustering)
 
 Foi aplicado o algoritmo K-Means (k=5) para agrupar os municípios com perfis socioeconômicos semelhantes.
-As variáveis numéricas foram padronizadas antes da clusterização;
-Cada município recebeu um rótulo de cluster (cluster ∈ {0, 1, 2, 3, 4});
+
+As variáveis numéricas foram padronizadas antes da clusterização.
+
+Cada município recebeu um rótulo de cluster (cluster ∈ {0, 1, 2, 3, 4}).
+
 Os clusters foram visualizados em um mapa com uma escala de tons de roxo.
 
 ### 5. Estatísticas Descritivas por Cluster
 
 Após a clusterização, foi feita uma análise de médias e desvios-padrão das variáveis numéricas em cada grupo.
+
 Isso permite entender:
 - Quais características diferenciam os clusters;
 - Quais indicadores são mais altos ou baixos em cada grupo;
@@ -51,11 +63,16 @@ Isso permite entender:
 ## Principais Tecnologias Utilizadas
 
 Pandas / GeoPandas
+
 Matplotlib
+
 Scikit-learn
 
 ## Resultados
 Identificação dos fatores que mais influenciam o IDHM.
+
 Classificação dos municípios brasileiros em grupos de similaridade socioeconômica.
+
 Visualização geográfica interativa e estática dos resultados.
+
 Base sólida para subsidiar políticas públicas regionais baseadas em dados.
