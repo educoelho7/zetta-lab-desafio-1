@@ -76,3 +76,42 @@ Classificação dos municípios brasileiros em grupos de similaridade socioecon�
 Visualização geográfica interativa e estática dos resultados.
 
 Base sólida para subsidiar políticas públicas regionais baseadas em dados.
+
+# Como executar
+- Baixe a malha municipal:
+
+```bash
+wget https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/Brasil/BR_Municipios_2024.zip
+```
+
+- Extraia para a pasta `BR_Municipios_2024`:
+
+```bash
+unzip BR_Municipios_2024.zip -d BR_Municipios_2024
+```
+
+- Crie um ambiente virtual:
+
+```bash
+python3 -m venv venv
+```
+
+- Ative o ambiente virtual:
+
+```bash
+source venv/bin/activate
+```
+
+- Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+- Inicie o `jupyter notebook` para executar o notebook `desafio1.ipynb`:
+
+```bash
+jupyter notebook
+```
+
+
